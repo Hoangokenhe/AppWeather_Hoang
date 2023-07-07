@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#660396A6"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/bgroud"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtSearch"
+                android:textColorHint="@color/white"
+                android:hint="City, State"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:background="@drawable/search_24"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+            </LinearLayout>
+<TextView
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:id="@+id/tvCountry"
+    android:textSize="@dimen/_20sdp"
+    android:textColor="@color/white"
+    android:text="Tên quốc gia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_info"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="@dimen/_200sdp">
+
+                <TextView
+                    android:id="@+id/tvDay"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:text="Ngày Cập nhật"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgWeather"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"/>
+
+
+                    <TextView
+
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:text="16"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_40sdp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="HÀ NỘI"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_32sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="mưa lớn"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_info2"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/may" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="mây"
+                            android:id="@+id/tvClound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/humidity" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="Độ ẩm"
+                            android:id="@+id/tvHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/wind" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="gió"
+                            android:id="@+id/tvWind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnChangeAc"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_info"
+                android:text="Các ngày tiếp theo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
