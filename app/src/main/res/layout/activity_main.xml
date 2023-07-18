@@ -12,62 +12,75 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:background="@drawable/bgroud"
-            android:orientation="vertical"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/bgroud"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_margin="@dimen/_20sdp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/edtSearch"
-                android:textColorHint="@color/white"
-                android:hint="City, State"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp">
+
+                <EditText
+                    
+                    android:drawableRight="@drawable/search_24"
+
+                    android:padding="@dimen/_10sdp"
+                    android:id="@+id/edtSearch"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edt"
+                    android:hint=" Search for a city "
+                    android:textColor="@color/black"
+                    android:textColorHint="#6E6A6A" />
+
                 <ImageView
                     android:id="@+id/imgSearch"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:background="@drawable/search_24"
                     android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_30sdp"/>
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:background="@drawable/search_24" />
             </LinearLayout>
-<TextView
-    android:layout_marginLeft="@dimen/_20sdp"
-    android:id="@+id/tvCountry"
-    android:textSize="@dimen/_20sdp"
-    android:textColor="@color/white"
-    android:text="Tên quốc gia"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Tên quốc gia"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_margin="@dimen/_50sdp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_info"
+
                 android:layout_width="@dimen/_300sdp"
-                android:layout_height="@dimen/_200sdp">
+                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_50sdp"
+                android:background="@drawable/bg_info"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvDay"
-                    android:textSize="@dimen/_15sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Ngày Cập nhật"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="@dimen/_15sdp" />
+
                 <LinearLayout
-                    android:layout_margin="@dimen/_10sdp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/imgWeather"
-                        android:layout_margin="@dimen/_10sdp"
                         android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"/>
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_margin="@dimen/_10sdp" />
 
 
                     <TextView
@@ -94,7 +107,6 @@
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="HÀ NỘI"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_32sdp"
@@ -117,23 +129,25 @@
 
 
             <LinearLayout
-                android:orientation="vertical"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:background="@drawable/bg_info2"
-                android:layout_width="@dimen/_300sdp"
-                android:layout_height="match_parent">
+                android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <LinearLayout
 
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp">
+                        android:layout_height="@dimen/_100sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -141,20 +155,22 @@
 
                         <TextView
 
-                            android:textStyle="italic"
-                            android:textSize="@dimen/_20sdp"
-                            android:text="mây"
                             android:id="@+id/tvClound"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/black" />
+                            android:text="mây"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="italic" />
                     </LinearLayout>
+
                     <LinearLayout
 
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp">
+                        android:layout_height="@dimen/_100sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -162,20 +178,22 @@
 
                         <TextView
 
-                            android:textStyle="italic"
-                            android:textSize="@dimen/_20sdp"
-                            android:text="Độ ẩm"
                             android:id="@+id/tvHumidity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/black" />
+                            android:text="Độ ẩm"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="italic" />
                     </LinearLayout>
+
                     <LinearLayout
 
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp">
+                        android:layout_height="@dimen/_100sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -183,31 +201,31 @@
 
                         <TextView
 
-                            android:textStyle="italic"
-                            android:textSize="@dimen/_20sdp"
-                            android:text="gió"
                             android:id="@+id/tvWind"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/black" />
+                            android:text="gió"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="italic" />
                     </LinearLayout>
 
                 </LinearLayout>
 
 
-
             </LinearLayout>
+
             <Button
+                android:padding="@dimen/_5sdp"
                 android:id="@+id/btnChangeAc"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_info"
-                android:text="Các ngày tiếp theo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_info"
+                android:text="Các ngày tiếp theo" />
 
         </LinearLayout>
-
 
 
     </ScrollView>

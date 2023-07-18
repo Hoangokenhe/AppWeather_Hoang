@@ -51,16 +51,19 @@ public class MainActivity extends AppCompatActivity {
     TextView tvWind;
     @BindView(R.id.edtSearch)
     EditText edtSearch;
-    @BindView(R.id.imgWeather)
-    ImageView imgWeather;
     @BindView(R.id.imgSearch)
     ImageView imgSearch;
+    @BindView(R.id.imgWeather)
+    ImageView imgWeather;
+
+    
     @BindView(R.id.btnChangeAc)
     Button btnChangeAc;
 
 
     public static final String TAG = "zzzzzzzzzzzzz";
-String City="";
+    String City = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,12 +74,12 @@ String City="";
         imgSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String city=edtSearch.getText().toString();
-                if (city.equals("")){
-                    City="HaNoi";
+                String city = edtSearch.getText().toString();
+                if (city.equals("")) {
+                    City = "HaNoi";
                     GetCurrentWeatherData(City);
-                }else {
-                    City=city;
+                } else {
+                    City = city;
                     GetCurrentWeatherData(city);
                 }
 
@@ -85,9 +88,9 @@ String City="";
         btnChangeAc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String city=edtSearch.getText().toString();
-                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
-                intent.putExtra("name",city);
+                String city = edtSearch.getText().toString();
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent.putExtra("name", city);
                 startActivity(intent);
             }
         });
@@ -95,54 +98,54 @@ String City="";
 
     public void GetCurrentWeatherData(String data) {
         RequestQueue referenceQueue = Volley.newRequestQueue(MainActivity.this);
-        String url = "https://api.openweathermap.org/data/2.5/weather?q=" + data + "&appid=353fbff4cccb99fdc8c341cf78a75c96";
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        String url = "https://api.openweathermap.org/data/2.5/weather?q="+data+"&appid=353fbff4cccb99fdc8c341cf78a75c96&units=metric";
+        StringRequest stringRequest = new StringRequest(Request.Method.GET,url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            JSONObject jsonObject=new JSONObject(response);
-                            String day=jsonObject.getString("dt");
-                            String name=jsonObject.getString("name");
+                            JSONObject jsonObject = new JSONObject(response);
+                            String day = jsonObject.getString("dt");
+                            String name = jsonObject.getString("name");
                             tvName.setText(name);
 
-                            long l=Long.valueOf(day);
-                            Date date=new Date(l*1000L);
-                            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("EEEE yyyy-MM-dd HH-mm-ss");
-                            String Day=simpleDateFormat.format(date);
+                            long l = Long.valueOf(day);
+                            Date date = new Date(l * 1000L);
+                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE yyyy-MM-dd HH-mm-ss");
+                            String Day = simpleDateFormat.format(date);
 
                             tvDay.setText(Day);
 
-                            JSONArray jsonArrayWeather=jsonObject.getJSONArray("weather");
-                            JSONObject jsonObjectWeather=jsonArrayWeather.getJSONObject(0);
+                            JSONArray jsonArrayWeather = jsonObject.getJSONArray("weather");
+                            JSONObject jsonObjectWeather = jsonArrayWeather.getJSONObject(0);
 
-                            String status =jsonObjectWeather.getString("main");
-                            String icon=jsonObjectWeather.getString("icon");
+                            String status = jsonObjectWeather.getString("main");
+                            String icon = jsonObjectWeather.getString("icon");
 
-                            Picasso.get().load("https://openweathermap.org/img/wn/"+icon+".png").into(imgWeather);
+                            Picasso.get().load("https://openweathermap.org/img/wn/" + icon + ".png").into(imgWeather);
                             tvStatus.setText(status);
 
-                            JSONObject jsonObjectMain=jsonObject.getJSONObject("main");
+                            JSONObject jsonObjectMain = jsonObject.getJSONObject("main");
                             String nhietdo = jsonObjectMain.getString("temp");
-                            String doam=jsonObjectMain.getString("humidity");
+                            String doam = jsonObjectMain.getString("humidity");
 
-                            Double a= Double.valueOf(nhietdo);
-                            String NhietDo=String.valueOf(a.intValue());
+                            Double a = Double.valueOf(nhietdo);
+                            String NhietDo = String.valueOf(a.intValue());
 
-                            tvTemp.setText(NhietDo+ "℃");
-                            tvHumidity.setText(doam+ "%");
+                            tvTemp.setText(NhietDo + "℃");
+                            tvHumidity.setText(doam + "%");
 
-                            JSONObject jsonObjectWind=jsonObject.getJSONObject("wind");
-                            String gio=jsonObjectWind.getString("speed");
-                            tvWind.setText(gio +"m/s");
+                            JSONObject jsonObjectWind = jsonObject.getJSONObject("wind");
+                            String gio = jsonObjectWind.getString("speed");
+                            tvWind.setText(gio + "m/s");
 
-                            JSONObject jsonObjectClouds=jsonObject.getJSONObject("clouds");
+                            JSONObject jsonObjectClouds = jsonObject.getJSONObject("clouds");
                             String may = jsonObjectClouds.getString("all");
-                            tvClound.setText(may+ "%");
+                            tvClound.setText(may + "%");
 
-                            JSONObject jsonObjectSys=jsonObject.getJSONObject("sys");
-                            String country=jsonObjectSys.getString("country");
-                            tvCountry.setText("Tên quốc gia: "+country);
+                            JSONObject jsonObjectSys = jsonObject.getJSONObject("sys");
+                            String country = jsonObjectSys.getString("country");
+                            tvCountry.setText("Tên quốc gia: " + country);
 
                         } catch (JSONException e) {
                             throw new RuntimeException(e);

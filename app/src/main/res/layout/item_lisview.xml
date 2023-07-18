@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_330sdp"
+    android:layout_height="@dimen/_180sdp"
+    android:background="@drawable/rectangle"
+    >
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginLeft="@dimen/_180sdp"
+
+        android:src="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:layout_toEndOf="@id/abc"
+        android:text="mưa"
+        android:textSize="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/abc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:textColor="@color/white"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="19"
+            android:textSize="@dimen/_64sdp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/tvMax"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Max"
+                android:textSize="@dimen/_20sdp" />
+
+            <TextView
+                android:id="@+id/tvMin"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Min"
+                android:textSize="@dimen/_20sdp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="day"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
