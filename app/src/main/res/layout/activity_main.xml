@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#660396A6"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -12,67 +13,71 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
             android:background="@drawable/bgroud"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_20sdp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_20sdp">
+                android:background="@drawable/bg_edt_search"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp">
 
                 <EditText
                     android:id="@+id/edtSearch"
-                    android:layout_width="@dimen/_200sdp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/search_24"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:hint="City, State"
-                    android:textColorHint="@color/white" />
-
-                <ImageView
-                    android:id="@+id/imgSearch"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:background="@drawable/search_24" />
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/blue_EBEBF5_60" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvCountry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:text="Tên quốc gia"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_20sdp" />
-
+<TextView
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:id="@+id/tvCountry"
+    android:textSize="@dimen/_20sdp"
+    android:textColor="@color/white"
+    android:text="Tên quốc gia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
             <LinearLayout
-                android:layout_width="@dimen/_300sdp"
-                android:layout_height="@dimen/_200sdp"
-                android:layout_gravity="center"
+                android:orientation="vertical"
                 android:layout_margin="@dimen/_50sdp"
+                android:layout_gravity="center"
                 android:background="@drawable/bg_info"
-                android:orientation="vertical">
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="@dimen/_200sdp">
 
                 <TextView
                     android:id="@+id/tvDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15sdp"
                     android:layout_gravity="center"
                     android:text="Ngày Cập nhật"
-                    android:textSize="@dimen/_15sdp" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_10sdp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/imgWeather"
+                        android:layout_margin="@dimen/_10sdp"
                         android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"
-                        android:layout_margin="@dimen/_10sdp" />
+                        android:layout_height="@dimen/_100sdp"/>
 
 
                     <TextView
@@ -122,25 +127,23 @@
 
 
             <LinearLayout
-                android:layout_width="@dimen/_300sdp"
-                android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:layout_gravity="center"
                 android:background="@drawable/bg_info2"
-                android:orientation="vertical">
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="match_parent">
 
 
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
+                    android:layout_height="wrap_content">
                     <LinearLayout
 
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"
                         android:gravity="center"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -148,22 +151,20 @@
 
                         <TextView
 
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="mây"
                             android:id="@+id/tvClound"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="mây"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
-
                     <LinearLayout
 
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"
                         android:gravity="center"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -171,22 +172,20 @@
 
                         <TextView
 
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="Độ ẩm"
                             android:id="@+id/tvHumidity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Độ ẩm"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
-
                     <LinearLayout
 
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp"
                         android:gravity="center"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
@@ -194,30 +193,31 @@
 
                         <TextView
 
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="gió"
                             android:id="@+id/tvWind"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="gió"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
 
                 </LinearLayout>
 
 
-            </LinearLayout>
 
+            </LinearLayout>
             <Button
                 android:id="@+id/btnChangeAc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
                 android:background="@drawable/bg_info"
-                android:text="Các ngày tiếp theo" />
+                android:text="Các ngày tiếp theo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
+
 
 
     </ScrollView>
