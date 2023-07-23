@@ -107,18 +107,18 @@
 
                         android:text="HÀ NỘI"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_32sdp"
+                        android:textSize="@dimen/_25sdp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvStatus"
+                        android:id="@+id/tvDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:fontFamily="@font/sf_pro_display_regular"
                         android:text="mưa lớn"
                         android:textColor="#80FFFFFF"
-                        android:textSize="@dimen/_20sdp" />
+                        android:textSize="@dimen/_17sdp" />
 
                 </LinearLayout>
 
@@ -147,14 +147,103 @@
                         <ImageView
                             android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_40sdp"
-                            android:src="@drawable/may" />
+                            android:src="@drawable/temperature" />
 
                         <TextView
 
                             android:textStyle="italic"
                             android:textSize="@dimen/_20sdp"
-                            android:text="mây"
-                            android:id="@+id/tvClound"
+                            android:text="mưa"
+                            android:id="@+id/tvCurrentTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/wet" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="gió"
+                            android:id="@+id/tvHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/mountain" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="gió"
+                            android:id="@+id/tvSeaLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/wind" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="mưa"
+                            android:id="@+id/tvWindSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/sun" />
+
+                        <TextView
+
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_20sdp"
+                            android:text="gió"
+                            android:id="@+id/tvTempMax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black" />
@@ -174,33 +263,16 @@
 
                             android:textStyle="italic"
                             android:textSize="@dimen/_20sdp"
-                            android:text="Độ ẩm"
-                            android:id="@+id/tvHumidity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-                    <LinearLayout
-
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="@dimen/_100sdp"
-                        android:layout_height="@dimen/_100sdp">
-                        <ImageView
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
-                            android:src="@drawable/wind" />
-
-                        <TextView
-
-                            android:textStyle="italic"
-                            android:textSize="@dimen/_20sdp"
                             android:text="gió"
-                            android:id="@+id/tvWind"
+                            android:id="@+id/tvPressure"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black" />
                     </LinearLayout>
+
+
+
+
 
                 </LinearLayout>
 

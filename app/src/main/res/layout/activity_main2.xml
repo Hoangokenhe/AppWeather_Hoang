@@ -24,7 +24,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_32sdp"
         android:textStyle="bold" />
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lv_5day"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
